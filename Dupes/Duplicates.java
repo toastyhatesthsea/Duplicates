@@ -9,6 +9,12 @@ public class Duplicates
 
 
     public int removeDuplicates(int[] nums) {
+
+        if (nums.length <= 1)
+        {
+            return 1;
+        }
+
         int i = nums.length > 1 ? 1 : 0;
 
         for (int j = i + 1; j < nums.length; j++)
@@ -39,9 +45,11 @@ class DupeTest
         Duplicates dupes = new Duplicates();
 
         int test[] = {2, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+        int one[] = {1};
+        int oneTwo[] = {1, 2};
 
         int[] meows = {-5, -5, -5, -5, -4, -4, -2, -2, -2, -2, -1, -1, -1, 0, 0, 0};
 
-        dupes.removeDuplicates(meows);
+        dupes.removeDuplicates(oneTwo);
     }
 }
